@@ -1,0 +1,68 @@
+.list{
+    $self: &;
+  
+    margin-bottom: 30px;
+
+    &__add-button{
+       opacity: 0.6;
+
+       &:hover{
+           opacity: 1;
+           transition: 0.3s;
+       }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px 12px;
+      margin-bottom: 5px;
+
+      &:hover #{$self}__remove-icon{
+        opacity: 0.3;
+      }
+
+      #{$self}__remove-icon{
+        opacity: 0;
+        &:hover{
+          opacity: 0.6;
+        }
+      }
+
+      span {
+        flex: 1;
+      // text-overflow: ellipsis;
+      //   overflow: hidden; 
+      //   width: 160px; 
+      //   white-space: nowrap;  
+      }
+
+      &:hover{
+        background: rgb(255, 255, 255);
+        transition: 0.3s;
+      }
+
+      &.active{
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.03);
+        border-radius: 4px;
+      }
+
+      .badge{
+        position: relative;
+        left: 5px;
+      }
+    }
+
+    i{
+      display: inline-flex;
+      margin-right: 8px;
+      svg{
+        path{
+          fill: #7C7C7C;
+        }
+      }
+    }
+    
+}
